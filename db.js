@@ -4,7 +4,7 @@ async function connectDB() {
   const uri = process.env.MONGO_URI || 'mongodb://localhost:27017/myMMO';
   await mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   });
   console.log('Connected to MongoDB.');
 }
