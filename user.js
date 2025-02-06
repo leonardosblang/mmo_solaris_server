@@ -6,17 +6,13 @@ const UserSchema = new Schema({
   y: { type: Number, default: 1132 },
   z: { type: Number, default: 2 },
   zone: { type: String, default: "demozone0" },
-
   hp: { type: Number, default: 100 },
   current_hp: { type: Number, default: 100 },
   atk: { type: Number, default: 10 },
   defense: { type: Number, default: 5 },
-
-  // NEW: Mana system
   mana: { type: Number, default: 50 },
   current_mana: { type: Number, default: 50 },
-
-  // NEW: Skills 1-8, each default = "default"
+  // Skills 1-8 (with defaults)
   skill1: { type: String, default: "default" },
   skill2: { type: String, default: "default" },
   skill3: { type: String, default: "default" },
@@ -24,7 +20,11 @@ const UserSchema = new Schema({
   skill5: { type: String, default: "default" },
   skill6: { type: String, default: "default" },
   skill7: { type: String, default: "default" },
-  skill8: { type: String, default: "default" }
+  skill8: { type: String, default: "default" },
+  // NEW: Leveling and rewards
+  level: { type: Number, default: 1 },
+  xp: { type: Number, default: 0 },
+  gold: { type: Number, default: 0 }
 });
 
 module.exports = model('User', UserSchema);
